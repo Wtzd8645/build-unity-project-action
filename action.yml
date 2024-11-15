@@ -11,7 +11,7 @@ inputs:
   build_method:
     description: "The fully qualified name of the Unity build method to execute, typically in the format 'Namespace.Class.Method'. This method will be invoked to start the build process."
     required: true
-  build_version:
+  version:
     description: "Version number for the build. This is used to label the generated logs."
   output_dir:
     description: "Relative path to the project_path where the build output will be stored. If not specified, the build output will be stored in the project directory."
@@ -35,7 +35,7 @@ runs:
         unity_install_dir: ${{ inputs.unity_install_dir }}
         project_path: ${{ inputs.project_path }}
         build_method: ${{ inputs.build_method }}
-        build_version: ${{ inputs.build_version }}
+        version: ${{ inputs.version }}
         output_dir: ${{ inputs.output_dir }}
         log_name: ${{ inputs.log_name }}
         custom_options: ${{ inputs.custom_options }}
